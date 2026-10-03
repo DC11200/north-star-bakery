@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Baked Goods | North Star Bakery</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -28,6 +29,18 @@
       <img src="bakery-bread.jpg" alt="Assorted round sourdough loaves and baguettes stacked neatly on wooden display shelves" width="550" height="360">
     </section>
 
+    <!-- Interactive Pre-Order Wishlist Widget -->
+    <section id="wishlist-container" style="background-color: rgba(107, 62, 38, 0.08); padding: 1rem; border-radius: 6px; margin: 1.5rem 0;">
+      <h2>Your Pre-Order Inquiry List (<span id="wishlist-count">0</span> items)</h2>
+      <ul id="wishlist-items" style="list-style-type: square; margin-bottom: 0.75rem;">
+        <li>No items added yet. Click an item below to build your inquiry.</li>
+      </ul>
+      <p id="wishlist-transfer-note" style="display: none; font-weight: bold; margin-bottom: 0.75rem;">
+        Ready to submit? Your list will automatically carry over when you open the <a href="contact.html">Pre-Order Form</a>!
+      </p>
+      <button type="button" id="btn-clear-wishlist" style="background-color: transparent; border: 1px solid #6B3E26; color: #6B3E26; padding: 0.4rem 0.8rem; border-radius: 4px; cursor: pointer;">Clear List</button>
+    </section>
+
     <!-- Required figure element with caption -->
     <figure>
       <img src="bakery-signature-loaf.jpg" alt="Close-up of a dark, blistered artisan sourdough loaf scored with a wheat pattern" width="550" height="380">
@@ -38,8 +51,14 @@
       <h2>Artisan Hearth Breads</h2>
       <p><em>Priced between 6.50 USD and 10.50 USD per loaf</em></p>
       <ul>
-        <li><strong>Heritage Country Sourdough:</strong> 80% extraction wheat, whole rye, and sea salt with a blistered crust.</li>
-        <li><strong>Seeded Multigrain:</strong> Packed with toasted sunflower, sesame, pumpkin, and flax seeds.</li>
+        <li>
+          <strong>Heritage Country Sourdough:</strong> 80% extraction wheat, whole rye, and sea salt with a blistered crust.
+          <button type="button" class="btn-add-item" data-id="loaf-sourdough" style="margin-left: 0.5rem; font-size: 0.8rem; padding: 0.2rem 0.5rem; cursor: pointer; border-radius: 4px; border: 1px solid #6B3E26; background: #6B3E26; color: #FFF8F0;">+ Add to Order</button>
+        </li>
+        <li>
+          <strong>Seeded Multigrain:</strong> Packed with toasted sunflower, sesame, pumpkin, and flax seeds.
+          <button type="button" class="btn-add-item" data-id="loaf-seeded" style="margin-left: 0.5rem; font-size: 0.8rem; padding: 0.2rem 0.5rem; cursor: pointer; border-radius: 4px; border: 1px solid #6B3E26; background: #6B3E26; color: #FFF8F0;">+ Add to Order</button>
+        </li>
         <li><strong>Rustic French Baguette:</strong> Crisp exterior with an open, custardy honeycomb crumb.</li>
         <li><strong>Cranberry Walnut Batard:</strong> Tangy sourdough folded with toasted walnuts and tart dried cranberries.</li>
       </ul>
@@ -49,10 +68,16 @@
       <h2>Viennoiserie &amp; Morning Pastries</h2>
       <p><em>Priced between 3.75 USD and 5.50 USD per piece</em></p>
       <ul>
-        <li><strong>Classic Butter Croissant:</strong> Layered with fermented European-style butter for sixty-four distinct flaky sheets.</li>
+        <li>
+          <strong>Classic Butter Croissant:</strong> Layered with fermented European-style butter for sixty-four distinct flaky sheets.
+          <button type="button" class="btn-add-item" data-id="pastry-croissant" style="margin-left: 0.5rem; font-size: 0.8rem; padding: 0.2rem 0.5rem; cursor: pointer; border-radius: 4px; border: 1px solid #6B3E26; background: #6B3E26; color: #FFF8F0;">+ Add to Order</button>
+        </li>
         <li><strong>Pain au Chocolat:</strong> Folded with two batons of bittersweet 60% dark chocolate.</li>
         <li><strong>Seasonal Fruit Danish:</strong> Filled with vanilla bean pastry cream and stone fruits or berries from local orchards.</li>
-        <li><strong>Almond Frangipane Croissant:</strong> Twice-baked, brushed with orange blossom syrup, and topped with sliced almonds.</li>
+        <li>
+          <strong>Cardamom Morning Bun:</strong> Spiced caramelized brioche dusted with demerara sugar.
+          <button type="button" class="btn-add-item" data-id="pastry-morningbun" style="margin-left: 0.5rem; font-size: 0.8rem; padding: 0.2rem 0.5rem; cursor: pointer; border-radius: 4px; border: 1px solid #6B3E26; background: #6B3E26; color: #FFF8F0;">+ Add to Order</button>
+        </li>
       </ul>
     </section>
 
@@ -60,7 +85,10 @@
       <h2>Layer Cakes &amp; Gathering Sweets</h2>
       <p><em>Priced between 32.00 USD and 58.00 USD (available primarily by advance request)</em></p>
       <ul>
-        <li><strong>Carrot &amp; Toasted Pecan Cake:</strong> Spiced carrot sponge layered with whipped mascarpone cream cheese frosting.</li>
+        <li>
+          <strong>Carrot &amp; Toasted Pecan Cake:</strong> Spiced carrot sponge layered with whipped mascarpone cream cheese frosting.
+          <button type="button" class="btn-add-item" data-id="cake-carrot" style="margin-left: 0.5rem; font-size: 0.8rem; padding: 0.2rem 0.5rem; cursor: pointer; border-radius: 4px; border: 1px solid #6B3E26; background: #6B3E26; color: #FFF8F0;">+ Add to Order</button>
+        </li>
         <li><strong>Dark Chocolate Olive Oil Cake:</strong> Moist, rich single-tier cake dusted with cocoa and Maldon sea salt flakes.</li>
         <li><strong>Lemon Buttermilk Bundt:</strong> Tart, tender crumb soaked in fresh lemon verbena glaze.</li>
       </ul>

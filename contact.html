@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact &amp; Pre-Orders | North Star Bakery</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -38,12 +39,12 @@
       </ul>
     </section>
 
-    <!-- Required form with fieldset, legend, labels, and built-in validation -->
+    <!-- Required form with novalidate for custom JS validation feedback -->
     <section>
       <h2>Pre-Order &amp; General Inquiry Form</h2>
       <p>Please note: We require at least <strong>48 hours notice</strong> for all bread and pastry pre-orders. We will review your request and send an email confirmation.</p>
 
-      <form action="submit-inquiry.html" method="post">
+      <form action="submit-inquiry.html" method="post" novalidate>
         
         <fieldset>
           <legend>Customer Information</legend>
