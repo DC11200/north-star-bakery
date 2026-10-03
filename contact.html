@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Pre-Orders | North Star Bakery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <img src="bakery-logo.png" alt="North Star Bakery logo featuring a warm compass star above a wheat stalk" width="180" height="70">
+    <h1>Contact &amp; Order Inquiries</h1>
+    <nav aria-label="Main Navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Our Baked Goods</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact &amp; Pre-Orders</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Visit or Reach Out</h2>
+      <p>Have a question about our ingredients, looking to order pastries for a corporate breakfast, or want to reserve bread for the weekend? Send us an inquiry below or drop by the bakehouse.</p>
+      
+      <h3>Location &amp; Store Hours</h3>
+      <p><strong>Bakehouse:</strong> 412 North Star Way, Corner of 4th &amp; Elm</p>
+      <p><strong>Phone:</strong> (555) 234-5678</p>
+      <p><strong>Bakehouse Counter Hours:</strong></p>
+      <ul>
+        <li>Tuesday – Friday: 6:30 AM – 3:00 PM</li>
+        <li>Saturday: 7:00 AM – 3:00 PM</li>
+        <li>Sunday: 7:30 AM – 1:00 PM (Bread &amp; coffee only)</li>
+        <li>Monday: Closed for deep cleaning and sourdough prep</li>
+      </ul>
+    </section>
+
+    <!-- Required form with fieldset, legend, labels, and built-in validation -->
+    <section>
+      <h2>Pre-Order &amp; General Inquiry Form</h2>
+      <p>Please note: We require at least <strong>48 hours notice</strong> for all bread and pastry pre-orders. We will review your request and send an email confirmation.</p>
+
+      <form action="submit-inquiry.html" method="post">
+        
+        <fieldset>
+          <legend>Customer Information</legend>
+          
+          <p>
+            <label for="customer-name">Full Name (Required):</label><br>
+            <input type="text" id="customer-name" name="customer_name" required autocomplete="name" placeholder="e.g., Sarah Jenkins">
+          </p>
+
+          <p>
+            <label for="customer-email">Email Address (Required):</label><br>
+            <input type="email" id="customer-email" name="customer_email" required autocomplete="email" placeholder="name@example.com">
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Order &amp; Request Details</legend>
+
+          <p>
+            <label for="request-type">Type of Request (Required):</label><br>
+            <select id="request-type" name="request_type" required>
+              <option value="">-- Choose an inquiry type --</option>
+              <option value="pre-order-bread">Bread Pre-Order (Loaves &amp; Baguettes)</option>
+              <option value="pre-order-pastry">Pastry &amp; Breakfast Box Pre-Order</option>
+              <option value="event-catering">Event or Meeting Catering Inquiry</option>
+              <option value="general-question">General Ingredient or Visit Question</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="pickup-date">Requested Pickup Date (Required):</label><br>
+            <input type="date" id="pickup-date" name="pickup_date" required>
+          </p>
+
+          <p>
+            <label for="item-details">Requested Items &amp; Quantities (Required):</label><br>
+            <textarea id="item-details" name="item_details" rows="5" cols="45" required placeholder="Please list the items and amounts you need (for example: 2 Country Sourdoughs, 6 Croissants, 4 Morning Buns)..."></textarea>
+          </p>
+
+          <p>
+            <label for="allergy-notes">Allergy or Dietary Notes (Optional):</label><br>
+            <textarea id="allergy-notes" name="allergy_notes" rows="3" cols="45" placeholder="Let us know of any tree nut, dairy, or egg allergies..."></textarea>
+          </p>
+        </fieldset>
+
+        <p>
+          <button type="submit">Submit Request</button>
+          <button type="reset">Clear Form</button>
+        </p>
+
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 North Star Bakery. Handcrafted daily with organic flour and local butter.</p>
+    <p>412 North Star Way | Phone: (555) 234-5678 | Email: hello@northstarbakery.com</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | North Star Bakery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <img src="bakery-logo.png" alt="North Star Bakery logo featuring a warm compass star above a wheat stalk" width="180" height="70">
+    <h1>North Star Bakery</h1>
+    <nav aria-label="Main Navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Our Baked Goods</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact &amp; Pre-Orders</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Fresh From the Oven to Our Neighborhood</h2>
+      <p>Welcome to North Star Bakery! Every morning before the sun comes up, our bakers are already mixing, kneading, and shaping batches of sourdough, flaky croissants, and morning rolls. Whether you are grabbing a quick coffee on your morning commute or ordering an assortment of cakes for a weekend celebration, we are glad to have a place at your table.</p>
+    </section>
+
+    <!-- Required responsive image with <picture> -->
+    <section>
+      <h2>Featured Item of the Week: Cardamom Morning Buns</h2>
+      <p>Slow-proofed laminated brioche rolled with freshly ground green cardamom, cinnamon, and raw demerara sugar for a crisp, caramelized finish.</p>
+      <picture>
+        <source media="(min-width: 768px)" srcset="bakery-feature-large.jpg">
+        <img src="bakery-feature-small.jpg" alt="A freshly glazed cardamom morning bun dusted with coarse sugar on cooling rack" width="600" height="400">
+      </picture>
+    </section>
+
+    <section>
+      <h2>What We're Known For</h2>
+      <article>
+        <h3>Slow Fermentation</h3>
+        <p>Our sourdough loaves ferment naturally for thirty-six hours, developing a crisp crust, an airy crumb, and an easy-to-digest flavor profile.</p>
+      </article>
+
+      <article>
+        <h3>Locally Milled Grains</h3>
+        <p>We work directly with regional organic grain farmers, milling several heirloom wheats in-house each week for maximum freshness.</p>
+      </article>
+
+      <article>
+        <h3>Celebration &amp; Event Orders</h3>
+        <p>From birthday dessert tables to boxed pastry spreads for morning work meetings, our kitchen accepts advance pre-orders throughout the week.</p>
+      </article>
+    </section>
+
+    <!-- Required media element with fallback text -->
+    <section>
+      <h2>A Message From Our Head Baker</h2>
+      <p>Listen to a quick welcome message from our head baker, Clara, about this week's seasonal flour delivery and oven schedule:</p>
+      <audio controls>
+        <source src="bakery-welcome.mp3" type="audio/mpeg">
+        Your browser does not support the audio element. You can <a href="bakery-welcome.mp3">download the welcome audio file</a> to listen.
+      </audio>
+    </section>
+
+    <section>
+      <h2>Visit Us in the Neighborhood</h2>
+      <p><strong>Address:</strong> 412 North Star Way, Corner of 4th &amp; Elm</p>
+      <p><strong>Bakehouse Hours:</strong> Tuesday through Saturday from 6:30 AM to 3:00 PM; Sunday from 7:30 AM to 1:00 PM (Closed Mondays).</p>
+      <p>Need a guaranteed box of morning pastries? Visit our <a href="contact.html">pre-order page</a> to reserve items 48 hours ahead.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 North Star Bakery. Handcrafted daily with organic flour and local butter.</p>
+    <p>412 North Star Way | Phone: (555) 234-5678 | Emai
